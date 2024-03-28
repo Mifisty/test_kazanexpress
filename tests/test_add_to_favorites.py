@@ -1,16 +1,13 @@
+from test_kazanexpress.pages.favorites_page import AddToFavorites
 
-from test_kazanexpress.pages.favorites_page import DeleteFromFavorites
 
-
-def test_delete_from_favorites():
-    favorites_page = DeleteFromFavorites
+def test_add_favorites():
+    favorites_page = AddToFavorites()
 
     favorites_page.open()
-
     favorites_page.add_item_to_favorites()
-    favorites_page.delete_item_from_favorites()
+    favorites_page.should_item_in_favorites()
 
-    favorites_page.should_favorites_empty()
 
 
 
@@ -29,7 +26,5 @@ def test_delete_from_favorites():
     #     browser.all('[data-test-id=button__add-to-favorites]').element_by(have.text('В желания')).click()
     # with allure.step('Переходим в избранное'):
     #     browser.element('[data-test-id=button__wishes]').click()
-    # with allure.step('Удаляем товар из избранного'):
-    #     browser.element('[data-test-id=button__add-to-favorites]').click()
-    # with allure.step('Проверяем то что в избранном нет товаров'):
-    #     browser.element('[data-test-id=text__empty-favorite-title]').should(have.text('Добавьте то, что понравилось'))
+    # with allure.step('Проверяем то что в избранном находится товар добавленный нами'):
+    #     browser.element('[data-test-id=item__product-card]').should(have.text('Кастрюля из нержавеющей стали'))
