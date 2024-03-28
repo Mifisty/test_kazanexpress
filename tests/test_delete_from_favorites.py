@@ -3,7 +3,7 @@ from test_kazanexpress.pages.favorites_page import DeleteFromFavorites
 
 
 def test_delete_from_favorites():
-    favorites_page = DeleteFromFavorites
+    favorites_page = DeleteFromFavorites()
 
     favorites_page.open()
 

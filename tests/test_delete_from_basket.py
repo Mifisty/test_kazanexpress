@@ -2,7 +2,7 @@ from test_kazanexpress.pages.basket_page import DeleteFromBasket
 
 
 def test_delete_from_basket():
-    basket_page = DeleteFromBasket
+    basket_page = DeleteFromBasket()
 
     basket_page.open()
 

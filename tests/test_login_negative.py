@@ -2,7 +2,7 @@ from test_kazanexpress.pages.login_page import LoginPage
 
 
 def test_login_negative():
-    login_page = LoginPage
+    login_page = LoginPage()
 
     login_page.open()
 
