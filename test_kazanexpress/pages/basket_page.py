@@ -1,5 +1,5 @@
 import allure
-from selene import browser, have
+from selene import have, browser
 
 
 class AddToBasket:
