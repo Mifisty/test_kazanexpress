@@ -22,6 +22,9 @@ class AddToFavorites:
         browser.element('[data-test-id=item__product-card]').should(have.text('Кастрюля из нержавеющей стали'))
 
 
+favorites_page = AddToFavorites()
+
+
 class DeleteFromFavorites:
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
@@ -43,3 +46,6 @@ class DeleteFromFavorites:
     @allure.step('Проверяем то что в избранном нет товаров')
     def should_favorites_empty(self):
         browser.element('[data-test-id=text__empty-favorite-title]').should(have.text('Добавьте то, что понравилось'))
+
+
+favorites_page_delete = DeleteFromFavorites()

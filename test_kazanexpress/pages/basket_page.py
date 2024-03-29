@@ -3,6 +3,7 @@ from selene import have, browser
 
 
 class AddToBasket:
+
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
         browser.open('/')
@@ -22,6 +23,9 @@ class AddToBasket:
     def should_item_in_basket(self):
         browser.element('[data-test-id=text__item-quantity]').should(have.text('1 товар'))
         return self
+
+
+basket_page = AddToBasket()
 
 
 class DeleteFromBasket:
@@ -49,3 +53,6 @@ class DeleteFromBasket:
     def should_basket_empty(self):
         browser.element('[data-test-id=text__empty-favorite-title]').should(have.text('В корзине пока нет товаров'))
         return self
+
+
+basket_page_delete = DeleteFromBasket()

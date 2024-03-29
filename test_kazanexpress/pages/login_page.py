@@ -23,3 +23,6 @@ class LoginPage:
     @allure.step('Проверяем, что выдало ошибку')
     def should_error_message(self):
         browser.element('.error-text').should(have.text('Неверный формат номера'))
+
+
+login_page = LoginPage()
