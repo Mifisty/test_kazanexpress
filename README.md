@@ -40,10 +40,10 @@ pytest .
 ```
 ----
 ### Удаленный запуск автотестов выполняется на сервере Jenkins
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/14hw_aozaki/">Ссылка на проект в Jenkins</a>
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/test_kaz_sh/">Ссылка на проект в Jenkins</a>
 #### Для запуска автотестов в Jenkins
 
-1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/14hw_aozaki/">проект</a>
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/test_kaz_sh/">проект</a>
 2. Нажать кнопку `Build`
 3. Результат запуска сборки можно посмотреть в отчёте Allure
 ----
