@@ -2,7 +2,7 @@ import allure
 from selene import have, browser
 
 
-class AddToBasket:
+class BasketPage:
 
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
@@ -24,26 +24,6 @@ class AddToBasket:
         browser.element('[data-test-id=text__item-quantity]').should(have.text('1 товар'))
         return self
 
-
-basket_page = AddToBasket()
-
-
-class DeleteFromBasket:
-    @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
-    def open(self):
-        browser.open('/')
-        return self
-
-    @allure.step('Находим и добавляем товар в корзину')
-    def add_item_to_basket(self):
-        browser.element('[data-test-id=input__search]').type('Кастрюля из нержавеющей стали').press_enter()
-        browser.all('[data-test-id=item__product-card]').element_by(
-            have.text('Кастрюля из нержавеющей стали со стеклянной крышкой')).click()
-        browser.all('[data-test-id=item__sku]').element_by(have.text('2 литра')).click()
-        browser.element('[data-test-id=button__add-cart]').click()
-        browser.element('[data-test-id=button__cart]').click()
-        return self
-
     @allure.step('Удаляем товар из корзины')
     def delete_item_from_basket(self):
         browser.element('[data-test-id=button__delete-from-cart]').click()
@@ -55,4 +35,4 @@ class DeleteFromBasket:
         return self
 
 
-basket_page_delete = DeleteFromBasket()
+basket_page = BasketPage()

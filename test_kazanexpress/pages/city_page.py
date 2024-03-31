@@ -2,7 +2,7 @@ import allure
 from selene import browser, have
 
 
-class ChangeCity:
+class CityPage:
 
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
@@ -19,4 +19,4 @@ class ChangeCity:
         browser.element('[data-test-id=button__select-city]').should(have.text('Воронеж'))
 
 
-city_page = ChangeCity()
+city_page = CityPage()
