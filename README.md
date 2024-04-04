@@ -55,6 +55,7 @@ pytest .
 #### Список тест кейсов в Allure TestOps
 ![This is an image](design/images/allure-testops.png)
 #### Нотификация в Telegram
-![This is an image](design/images/бот.png)
-
+![This is an image](design/images/bot2.png)
+#### Видео прохождения теста
+![This is an image](design/images/video.gif)
 
